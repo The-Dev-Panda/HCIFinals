@@ -192,44 +192,65 @@
   </div>
 </nav>
     </header>
-   <section class="text-success py-5 text-center bg-emphasis">
-            <hr class="footer-line text-light">
-          <div class="container">
-            <h1 class="display-2 fw-bold mt-4">Kennels</h1> 
-          </div>
- </section>
- <section class="image-center container my-5">
-                  <div class="row">
-                      <div class="col-md-6 ">
-                          <img src="img/k5.png" alt="KENNELS2" class="img-fluid rounded shadow image-container">
-                      </div>
-                       <div class="col-md-6 the-crunch text-success text-start">
-                          <h1>Our refurbed Kennels all 40 have a bedding area</h1>
-                                  <hr class="footer-line text-light" >
-
-                          <h3 class="the-crunch text-dark">
-                           Phil decided Daisy would make a great Mum and gave him his 1st Champion Brave Warrior of Naylenor in 1971 Greg (pet name) is pictured to the right.
-                          </h3>
-                                  <hr class="footer-line text-light">
-                          <h4 class="text-dark mt-4">There was no stopping Phil by 1975 he made 3 more Champions:</h4>
-                          <h5 class="R1 text-dark mb-4 lead fw-bold">
-                          <li>Blue Monarch</li>
-                          <li>Regal Warrior</li>
-                          <li>Battle cry (who then became also a Japanese Champion)</li>
-                          </h5>
-                          
-                      </div>
-                  </div>
-  </section>
-  <section class="the-crunch py-5 bg-emphasis">
   <section class="text-success py-5 text-center bg-emphasis">
-            <hr class="footer-line text-light">
-          <div class="container">
-            <h1 class="display-2 fw-bold mt-4">NAYLENOR YORKSHIRE TERRIERS</h1> 
-            <img src="img/k1.png" class="img-fluid" alt="...">
+  <div class="container">
+    <h1 class="display-2 fw-bold mt-4">Kennels</h1> 
+  </div>
+</section>
 
-            <p class="text-dark lead mb-4"><b>In 1979 Phil could see outstanding quality in one of his girl pups and knew she was special. Followed on by Magic's son CH.Naylenor Crown Jewel and his son CH.Naylenor Jewel in the Crown Champion Magic Moment was born , She became <b>Top Female yorkie in Britain.</b></p>
+<section class="image-center container my-5">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="img/k5.png" alt="KENNELS2" class="img-fluid rounded shadow image-container">
+    </div>
+    <div class="col-md-6 text-success text-start">
+      <h1>Our refurbed Kennels all 40 have a bedding area</h1>
+      <hr>
+      <h3 class="text-dark">Phil decided Daisy would make a great Mum and gave him his 1st Champion Brave Warrior of Naylenor in 1971 Greg (pet name) is pictured to the right.</h3>
+      <hr>
+      <h4 class="text-dark mt-4">There was no stopping Phil by 1975 he made 3 more Champions:</h4>
+      <h5 class="text-dark mb-4 lead fw-bold">
+        <li>Blue Monarch</li>
+        <li>Regal Warrior</li>
+        <li>Battle cry (who then became also a Japanese Champion)</li>
+      </h5>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div id="kennelCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/YT_1.jpg" class="d-block w-100 rounded shadow" alt="Kennel 1">
+      </div>
+      <div class="carousel-item">
+        <img src="img/YT_3.jpg" class="d-block w-100 rounded shadow" alt="Kennel 2">
+      </div>
+      <div class="carousel-item">
+        <img src="img/k1.png" class="d-block w-100 rounded shadow" alt="Kennel 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#kennelCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#kennelCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<section class="the-crunch py-5 bg-emphasis">
+  <div class="container text-center">
+    <h1 class="display-2 fw-bold mt-4">NAYLENOR YORKSHIRE TERRIERS</h1> 
+    <img src="img/k1.png" class="img-fluid" alt="...">
+
+    <p class="text-dark lead mb-4">
+      <b>In 1979 Phil could see outstanding quality in one of his girl pups and knew she was special...</b>
+    </p>
                       <hr class="footer-line text-light">
+   <button class="btn btn-outline-success-custom" data-bs-toggle="modal" data-bs-target="#yorkieModal">
+      Read More About Champions
+    </button>
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-5 mb-4">
         <img src="img/YT_1.jpg" class="img-fluid rounded shadow image-container" alt="Red Iced Tea" style="max-height: 500px; object-fit: cover;">
@@ -241,7 +262,24 @@
   </div>
 </section>
  </section>
-
+<div class="modal fade" id="yorkieModal" tabindex="-1" aria-labelledby="yorkieModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="yorkieModalLabel">More About Naylenor Champions</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Champion Naylenor Crown Jewel</strong> – Known for his elegance and spirit, Crown Jewel was a turning point in Naylenor breeding.</p>
+        <p><strong>Champion Jewel in the Crown</strong> – Heir to the line, his wins set a benchmark in the UK and internationally.</p>
+        <p><strong>Champion Magic Moment</strong> – Her legacy as the top female Yorkie in Britain remains unmatched.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <section id="contact" class="bg-success-subtle text-dark py-5" style="background: var(--bg-secondary); color: var(--text-primary);">
   <div class="container">
     <div class="row text-md-start align-items-start justify-content-between text-center text-md-left">
