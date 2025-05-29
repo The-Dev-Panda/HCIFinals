@@ -1,0 +1,30 @@
+@import url(test.css);
+.custom-img_animation_fade:hover img {
+    filter: blur(7px) grayscale(0.5);
+}
+
+.custom-img_animation_fade img {
+    filter: blur(0px);
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-img_animation_fade:hover .holder {
+    bottom: 50px;
+    color: black;
+    z-index: 1;
+    opacity: 1;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+}
+
+.custom-img_animation_fade .holder {
+    bottom: -50px;
+    opacity: 0;
+    color: --bg-primary;
+    transition: all 0.3s ease-in-out;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+}
+.custom-img_animation_fade .holder img{
+    filter: blur(0px);
+}
