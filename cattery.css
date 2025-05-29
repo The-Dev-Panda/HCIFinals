@@ -1,4 +1,9 @@
 @import url(test.css);
+
+.custom-img_animation_fade:hover {
+    box-shadow: 5px 5px 10px black;
+}
+
 .custom-img_animation_fade:hover img {
     filter: blur(7px) grayscale(0.5);
 }
@@ -25,6 +30,7 @@
     padding: 0px 20px 0px 20px;
     text-align: center;
 }
-.custom-img_animation_fade .holder img{
+
+.custom-img_animation_fade .holder img {
     filter: blur(0px);
 }
