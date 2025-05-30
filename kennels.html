@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-
    <style>
   :root {
     --primary-green: #4ade80;
@@ -105,34 +104,81 @@
     text-decoration: underline;
   }
 
-  .image-container img {
+  /* Improved image sizing */
+  .hero-image {
     width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-
-  .image-center img {
-    width: 1600px;
-    height: 900px;
+    height: 350px;
     object-fit: cover;
     border-radius: 12px;
-    margin-bottom: 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   }
+
+  .gallery-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .gallery-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .feature-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
   .btn-outline-success-custom {
-  color: #198754; 
-  border: 1px solid #198754;
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
+    color: #198754; 
+    border: 1px solid #198754;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
 
-.btn-outline-success-custom:hover {
-  background-color: #198754;
-  color: #fff;
-  border-color: #198754;
-}
+  .btn-outline-success-custom:hover {
+    background-color: #198754;
+    color: #fff;
+    border-color: #198754;
+  }
 
+  /* Modal enhancements */
+  .modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  }
+
+  .modal-header {
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+  }
+
+  .modal-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .info-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
 
   footer {
     background: var(--bg-secondary);
@@ -182,6 +228,9 @@
       </ul>
     </div>
     <div class="d-flex align-items-center gap-2">
+      <button class="control-btn" id="infoBtn" title="Kennel Information" data-bs-toggle="modal" data-bs-target="#kennelInfoModal">
+        <i class="bi bi-info-circle-fill"></i>
+      </button>
       <button class="control-btn" id="settingsBtn" title="Settings" data-bs-toggle="modal" data-bs-target="#settingsModal">
         <i class="bi bi-gear-fill"></i>
       </button>
@@ -192,94 +241,134 @@
   </div>
 </nav>
     </header>
+  
   <section class="text-success py-5 text-center bg-emphasis">
   <div class="container">
     <h1 class="display-2 fw-bold mt-4">Kennels</h1> 
   </div>
 </section>
 
-<section class="image-center container my-5">
-  <div class="row">
+<section class="container my-5">
+  <div class="row align-items-center">
     <div class="col-md-6">
-      <img src="img/k5.png" alt="KENNELS2" class="img-fluid rounded shadow image-container">
+      <img src="img/k5.png" alt="Aerial view of kennels" class="hero-image">
     </div>
-    <div class="col-md-6 text-success text-start">
-      <h1>Our refurbed Kennels all 40 have a bedding area</h1>
-      <hr>
-      <h3 class="text-dark">Phil decided Daisy would make a great Mum and gave him his 1st Champion Brave Warrior of Naylenor in 1971 Greg (pet name) is pictured to the right.</h3>
-      <hr>
-      <h4 class="text-dark mt-4">There was no stopping Phil by 1975 he made 3 more Champions:</h4>
-      <h5 class="text-dark mb-4 lead fw-bold">
-        <li>Blue Monarch</li>
-        <li>Regal Warrior</li>
-        <li>Battle cry (who then became also a Japanese Champion)</li>
-      </h5>
-    </div>
-  </div>
-
-  <!-- Carousel -->
-  <div id="kennelCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/YT_1.jpg" class="d-block w-100 rounded shadow" alt="Kennel 1">
-      </div>
-      <div class="carousel-item">
-        <img src="img/YT_3.jpg" class="d-block w-100 rounded shadow" alt="Kennel 2">
-      </div>
-      <div class="carousel-item">
-        <img src="img/k1.png" class="d-block w-100 rounded shadow" alt="Kennel 3">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#kennelCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#kennelCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
-</section>
-
-<section class="the-crunch py-5 bg-emphasis">
-  <div class="container text-center">
-    <h1 class="display-2 fw-bold mt-4">NAYLENOR YORKSHIRE TERRIERS</h1> 
-    <img src="img/k1.png" class="img-fluid" alt="...">
-
-    <p class="text-dark lead mb-4">
-      <b>In 1979 Phil could see outstanding quality in one of his girl pups and knew she was special...</b>
-    </p>
-                      <hr class="footer-line text-light">
-   <button class="btn btn-outline-success-custom" data-bs-toggle="modal" data-bs-target="#yorkieModal">
-      Read More About Champions
-    </button>
-    <div class="row justify-content-center">
-      <div class="col-md-6 col-lg-5 mb-4">
-        <img src="img/YT_1.jpg" class="img-fluid rounded shadow image-container" alt="Red Iced Tea" style="max-height: 500px; object-fit: cover;">
-      </div>
-      <div class="col-md-6 col-lg-5 mb-4">
-        <img src="img/YT_3.jpg" class="img-fluid rounded shadow image-container" alt="Blue Lemonade" style="max-height: 500px; object-fit: cover;">
+    <div class="col-md-6">
+      <div class="text-success">
+        <h2>Our refurbed Kennels all 40 have a bedding area</h2>
+        <p class="text-dark lead">Our refurbed Kennels all 40 have a bedding area (pic right) and a outside run with a view out on to fields or grass area.</p>
+        <p class="text-dark">We have a special toy dog area (pictured below) The toy dogs have their own little court yard and grass area to run out onto.</p>
+        <hr>
+        <h5 class="text-success">Key Features:</h5>
+        <ul class="text-dark">
+          <li>All dogs are exercised twice a day in summer & 3 times a day in winter starting around 7am then (winter)11am & again between 4-5 pm.</li>
+          <li>Inspections are 9-11am Mon-Sat.</li>
+          <li>Bring treats and bedding.</li>
+          <li>In the winter months heating is provided at no extra cost.</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
- </section>
-<div class="modal fade" id="yorkieModal" tabindex="-1" aria-labelledby="yorkieModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="yorkieModalLabel">More About Naylenor Champions</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+<!-- Kennel Images Gallery -->
+<section class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-6">
+      <img src="img/doghouse.jpg" alt="Interior of kennels showing individual bedding areas" class="gallery-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/doghouse.jpg" data-bs-title="Interior kennel facilities with individual bedding areas">
+      <p class="text-center mt-2 text-muted">Interior kennel facilities with individual bedding areas</p>
+    </div>
+    <div class="col-md-6">
+      <img src="img/grasscage.jpg" alt="Exercise area for dogs" class="gallery-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/grasscage.jpg" data-bs-title="One of our seven exercise areas">
+      <p class="text-center mt-2 text-muted">One of our seven exercise areas</p>
+    </div>
+  </div>
+  
+  <div class="row g-4 mt-3">
+    <div class="col-md-6">
+      <img src="img/cage.jpg" alt="Special area for toy dogs" class="gallery-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/cage.jpg" data-bs-title="Special courtyard area for toy dogs">
+      <p class="text-center mt-2 text-muted">Special courtyard area for toy dogs</p>
+    </div>
+    <div class="col-md-6">
+      <img src="img/grass.jpg" alt="Outdoor kennel runs" class="gallery-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/grass.jpg" data-bs-title="Outdoor runs with countryside views">
+      <p class="text-center mt-2 text-muted">Outdoor runs with countryside views</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-success-subtle py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <h2 class="text-success mb-3">Professional Kennel Care</h2>
+        <p class="text-dark lead mb-4">
+          Our 40 refurbished kennels provide comfortable accommodation for dogs of all sizes. Each kennel features a dedicated bedding area and outdoor run with beautiful countryside views.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="info-card">
+              <h5 class="text-success">Exercise Schedule:</h5>
+              <ul class="text-dark">
+                <li><strong>Summer:</strong> Exercise twice daily</li>
+                <li><strong>Winter:</strong> Exercise three times daily</li>
+                <li><strong>Times:</strong> 7am, 11am & 4-5pm</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-card">
+              <h5 class="text-success">Additional Services:</h5>
+              <ul class="text-dark">
+                <li>Free winter heating</li>
+                <li>Seven exercise areas</li>
+                <li>Special toy dog courtyard</li>
+                <li>Inspection visits: 9-11am Mon-Sat</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <p><strong>Champion Naylenor Crown Jewel</strong> – Known for his elegance and spirit, Crown Jewel was a turning point in Naylenor breeding.</p>
-        <p><strong>Champion Jewel in the Crown</strong> – Heir to the line, his wins set a benchmark in the UK and internationally.</p>
-        <p><strong>Champion Magic Moment</strong> – Her legacy as the top female Yorkie in Britain remains unmatched.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+      <div class="col-md-4">
+        <img src="img/grass.jpg" alt="Dogs exercising in grass area" class="feature-image">
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- Important Information Section -->
+<section class="container my-5">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="card border-success">
+        <div class="card-header bg-success text-white">
+          <h4 class="mb-0"><i class="bi bi-info-circle-fill me-2"></i>What to Bring</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h6 class="text-success">Required Items:</h6>
+              <ul>
+                <li>Dog's own bedding</li>
+                <li>Favorite treats</li>
+                <li>Any special dietary requirements</li>
+                <li>Vaccination certificates</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-success">Inspection Times:</h6>
+              <p><strong>Monday - Saturday:</strong> 9:00am - 11:00am</p>
+              <p class="text-muted small">Please call ahead to arrange your visit</p>
+              <button class="btn btn-outline-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#contactModal">
+                <i class="bi bi-telephone me-1"></i>Contact Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="bg-success-subtle text-dark py-5" style="background: var(--bg-secondary); color: var(--text-primary);">
   <div class="container">
     <div class="row text-md-start align-items-start justify-content-between text-center text-md-left">
@@ -331,6 +420,7 @@
   </div>
 </section>
 
+    <!-- Settings Modal -->
     <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -358,45 +448,191 @@
             </div>
         </div>
     </div>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const themeText = document.getElementById('themeText');
-        const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
 
-        let storageAvailable = false;
-        try {
-            if (typeof(Storage) !== "undefined") {
-                storageAvailable = true;
-            }
-        } catch (e) {}
+    <!-- Image Gallery Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Kennel Facility</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" alt="Kennel facility" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
 
-        let currentTheme = 'light';
-        if (storageAvailable) {
-            currentTheme = localStorage.getItem('theme') || 'light';
-        }
+    <!-- Kennel Information Modal -->
+    <div class="modal fade" id="kennelInfoModal" tabindex="-1" aria-labelledby="kennelInfoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-success" id="kennelInfoModalLabel">
+                        <i class="bi bi-house-door me-2"></i>Kennel Information
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-success"><i class="bi bi-check-circle me-2"></i>Facility Features</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-house me-2 text-success"></i>40 refurbished kennels</li>
+                                <li><i class="bi bi-bed me-2 text-success"></i>Individual bedding areas</li>
+                                <li><i class="bi bi-tree me-2 text-success"></i>Outdoor runs with countryside views</li>
+                                <li><i class="bi bi-thermometer-sun me-2 text-success"></i>Free winter heating</li>
+                                <li><i class="bi bi-heart me-2 text-success"></i>Special toy dog courtyard</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-success"><i class="bi bi-clock me-2"></i>Daily Schedule</h6>
+                            <div class="mb-3">
+                                <strong>Summer Exercise:</strong>
+                                <ul class="list-unstyled ms-3">
+                                    <li>• Morning: 7:00 AM</li>
+                                    <li>• Evening: 4:00-5:00 PM</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong>Winter Exercise:</strong>
+                                <ul class="list-unstyled ms-3">
+                                    <li>• Morning: 7:00 AM</li>
+                                    <li>• Midday: 11:00 AM</li>
+                                    <li>• Evening: 4:00-5:00 PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <h6 class="text-success">Inspection Visits Welcome</h6>
+                        <p class="mb-0">Monday - Saturday: 9:00 AM - 11:00 AM</p>
+                        <small class="text-muted">Please call ahead to arrange your visit</small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#contactModal">
+                        <i class="bi bi-telephone me-2"></i>Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        const setTheme = (theme) => {
-            html.setAttribute('data-bs-theme', theme);
-            if (theme === 'dark') {
-                themeIcon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
-                themeText.textContent = 'Dark Mode';
-            } else {
-                themeIcon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
-                themeText.textContent = 'Light Mode';
-            }
-            if (storageAvailable) {
-                localStorage.setItem('theme', theme);
-            }
-        };
+    <!-- Exercise Schedule Modal -->
+    <div class="modal fade" id="exerciseScheduleModal" tabindex="-1" aria-labelledby="exerciseScheduleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-success" id="exerciseScheduleModalLabel">
+                        <i class="bi bi-calendar-check me-2"></i>Exercise Schedule
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card border-success h-100">
+                                <div class="card-header bg-success text-white">
+                                    <h6 class="mb-0"><i class="bi bi-sun me-2"></i>Summer Schedule</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-sunrise text-warning me-2"></i>
+                                        <span><strong>7:00 AM</strong> - Morning Exercise</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-sunset text-orange me-2"></i>
+                                        <span><strong>4:00-5:00 PM</strong> - Evening Exercise</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-primary h-100">
+                                <div class="card-header bg-primary text-white">
+                                    <h6 class="mb-0"><i class="bi bi-snow me-2"></i>Winter Schedule</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-sunrise text-warning me-2"></i>
+                                        <span><strong>7:00 AM</strong> - Morning Exercise</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-sun text-info me-2"></i>
+                                        <span><strong>11:00 AM</strong> - Midday Exercise</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-sunset text-orange me-2"></i>
+                                        <span><strong>4:00-5:00 PM</strong> - Evening Exercise</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <div class="alert alert-info">
+                            <i class="bi bi-info-circle me-2"></i>
+                            <strong>7 Exercise Areas Available</strong><br>
+                            Each dog gets plenty of space to run and play safely
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        setTheme(currentTheme);
-
-        themeToggle.addEventListener('click', () => {
-            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-            setTheme(currentTheme);
-        });
-    </script>
-</body>
-</html>
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-success" id="contactModalLabel">
+                        <i class="bi bi-telephone me-2"></i>Contact Information
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-success mb-3">Get in Touch</h6>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-telephone-fill text-success me-3"></i>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    <a href="tel:+441543671082" class="text-decoration-none">(+44) 1543 671082</a>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-envelope-fill text-success me-3"></i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    <a href="mailto:info@fitstop.com" class="text-decoration-none">info@fitstop.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-success mb-3">Visit Us</h6>
+                            <div class="d-flex align-items-start mb-3">
+                                <i class="bi bi-geo-alt-fill text-success me-3 mt-1"></i>
+                                <div>
+                                    <strong>Address:</strong><br>
+                                    356 Lichfield Road<br>
+                                    Burntwood WS7 0HU
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-clock-fill text-success me-3 mt-1"></i>
+                                <div>
+                                    <strong>Inspection Hours:</strong><br>
+                                    Mon-Sat: 9:00 AM - 11:00 AM<br>
+                                    <small class="text-muted">Please call ahead</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.google.com/maps?q=356+Lichfield+Road,+Burntwood+WS7+0HU" target="_blank" class="btn btn-outline-success">
