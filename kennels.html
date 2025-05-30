@@ -267,26 +267,80 @@
 <section class="container my-5">
   <div class="row g-4">
     <div class="col-md-6">
-      <img src="img/doghouse.jpg" alt="Interior of kennels showing individual bedding areas" class="gallery-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/doghouse.jpg" data-bs-title="Interior kennel facilities with individual bedding areas">
-      <p class="text-center mt-2 text-muted">Interior kennel facilities with individual bedding areas</p>
+      <img src="img/doghouse.jpg" alt="Interior of kennels showing individual bedding areas" class="gallery-image img-fluid rounded shadow"
+           data-bs-toggle="modal" data-bs-target="#imageModal"
+           data-bs-image="img/doghouse.jpg"
+           data-bs-title="Interior kennel facilities with individual bedding areas for comfort and safety.">
+      <p class="text-center mt-2 text-muted">
+        Interior kennel facilities with individual bedding areas designed to provide comfort, safety, and a stress-free environment for each dog.
+      </p>
     </div>
     <div class="col-md-6">
-      <img src="img/grasscage.jpg" alt="Exercise area for dogs" class="gallery-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/grasscage.jpg" data-bs-title="One of our seven exercise areas">
-      <p class="text-center mt-2 text-muted">One of our seven exercise areas</p>
+      <img src="img/grasscage.jpg" alt="Exercise area for dogs" class="gallery-image img-fluid rounded shadow"
+           data-bs-toggle="modal" data-bs-target="#imageModal"
+           data-bs-image="img/grasscage.jpg"
+           data-bs-title="One of our seven spacious exercise areas for play and activity.">
+      <p class="text-center mt-2 text-muted">
+        One of our seven spacious exercise areas where dogs can enjoy daily playtime, stretching their legs and getting fresh air.
+      </p>
     </div>
   </div>
-  
+
   <div class="row g-4 mt-3">
     <div class="col-md-6">
-      <img src="img/cage.jpg" alt="Special area for toy dogs" class="gallery-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/cage.jpg" data-bs-title="Special courtyard area for toy dogs">
-      <p class="text-center mt-2 text-muted">Special courtyard area for toy dogs</p>
+      <img src="img/cage.jpg" alt="Special area for toy dogs" class="gallery-image img-fluid rounded shadow"
+           data-bs-toggle="modal" data-bs-target="#imageModal"
+           data-bs-image="img/cage.jpg"
+           data-bs-title="Special courtyard designed specifically for small and toy breeds.">
+      <p class="text-center mt-2 text-muted">
+        Special courtyard area designed for small and toy dog breeds—ensuring they have a secure space tailored to their size and temperament.
+      </p>
     </div>
     <div class="col-md-6">
-      <img src="img/grass.jpg" alt="Outdoor kennel runs" class="gallery-image" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/grass.jpg" data-bs-title="Outdoor runs with countryside views">
-      <p class="text-center mt-2 text-muted">Outdoor runs with countryside views</p>
+      <img src="img/grass.jpg" alt="Outdoor kennel runs" class="gallery-image img-fluid rounded shadow"
+           data-bs-toggle="modal" data-bs-target="#imageModal"
+           data-bs-image="img/grass.jpg"
+           data-bs-title="Outdoor runs with countryside views for a relaxing kennel experience.">
+      <p class="text-center mt-2 text-muted">
+        Outdoor kennel runs offer open-air space with beautiful countryside views, letting dogs enjoy the sights and smells of nature during their stay.
+      </p>
     </div>
   </div>
 </section>
+
+<!-- IMAGE MODAL -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-success" id="imageModalLabel">
+          <i class="bi bi-image me-2"></i>View Kennel Image
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="" alt="Modal Image" id="modalImage" class="img-fluid rounded shadow mb-3" style="max-height: 500px; object-fit: cover;">
+        <p id="imageDescription" class="text-muted"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT TO HANDLE MODAL IMAGE & DESCRIPTION -->
+<script>
+  const imageModal = document.getElementById('imageModal');
+  imageModal.addEventListener('show.bs.modal', function (event) {
+    const trigger = event.relatedTarget;
+    const imgSrc = trigger.getAttribute('data-bs-image');
+    const imgTitle = trigger.getAttribute('data-bs-title');
+
+    const modalImg = imageModal.querySelector('#modalImage');
+    const modalDesc = imageModal.querySelector('#imageDescription');
+
+    modalImg.src = imgSrc;
+    modalDesc.textContent = imgTitle;
+  });
+</script>  add more description if i click the modals add description in modals section i mean
 
 <section class="bg-success-subtle py-5">
   <div class="container">
@@ -440,22 +494,20 @@
     </div>
 </div>
 
+<!-- Image Modal -->
 <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title text-success" id="imageModalLabel">
-            <i class="bi bi-image me-2"></i>View Kennel Image
-          </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Kennel Facility</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" alt="Kennel facility" class="img-fluid">
+            </div>
         </div>
-        <div class="modal-body text-center">
-          <img src="" alt="Modal Image" id="modalImage" class="img-fluid rounded shadow mb-3" style="max-height: 500px; object-fit: cover;">
-          <p id="imageDescription" class="text-muted"></p>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
 <!-- Kennel Info Modal -->
 <div class="modal fade" id="kennelInfoModal" tabindex="-1" aria-labelledby="kennelInfoModalLabel" aria-hidden="true">
