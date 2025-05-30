@@ -6,7 +6,6 @@
     <title>Kennels - Edial Boarding Kennels & Cattery</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
    <style>
   :root {
@@ -264,6 +263,7 @@
     </div>
   </div>
 </section>
+
 <section class="container my-5">
   <div class="row g-4">
     <div class="col-md-6">
@@ -326,6 +326,7 @@
     </div>
   </div>
 </section>
+
 <section class="container my-5">
   <div class="row">
     <div class="col-md-8 mx-auto">
@@ -381,7 +382,7 @@
         <h6 class="fw-bold">Contact Us</h6>
         <p class="mb-1 d-flex align-items-center">
           <i class="bi bi-envelope-fill me-2"></i>
-          <a href="w.naylor@sky.com" class="link-hover-success mb-0">w.naylor@sky.com</a>
+          <a href="mailto:w.naylor@sky.com" class="link-hover-success mb-0">w.naylor@sky.com</a>
         </p>
         <p class="mb-0 d-flex align-items-center">
           <i class="bi bi-telephone-fill me-2"></i> (+44) 1543 671082
@@ -409,212 +410,235 @@
     </div>
   </div>
 </section>
-   <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header border-bottom-custom">
-                    <h5 class="modal-title text-dark-green" id="settingsModalLabel">Settings</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-4">
-                        <label for="fontSize" class="form-label fw-semibold">Font Size:</label>
-                        <select class="form-select bg-secondary-custom border-custom text-primary-custom" id="fontSize">
-                            <option value="fs-6">Small</option>
-                            <option value="fs-5" selected>Medium</option>
-                            <option value="fs-4">Large</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="form-label fw-semibold">Theme:</label>
-                        <button class="control-btn w-100 py-2" id="themeToggle" title="Toggle Dark Mode">
-                            <i class="bi bi-sun-fill me-2" id="themeIcon"></i>
-                            <span id="themeText">Light Mode</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Image charles -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel">Kennel Facility</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <img id="modalImage" src="" alt="Kennel facility" class="img-fluid">
-                </div>
+<!-- Settings Modal -->
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-custom">
+                <h5 class="modal-title text-dark-green" id="settingsModalLabel">Settings</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </div>
-    </div>
-    <div class="modal fade" id="kennelInfoModal" tabindex="-1" aria-labelledby="kennelInfoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-success" id="kennelInfoModalLabel">
-                        <i class="bi bi-house-door me-2"></i>Kennel Information
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+                <div class="mb-4">
+                    <label for="fontSize" class="form-label fw-semibold">Font Size:</label>
+                    <select class="form-select bg-secondary-custom border-custom text-primary-custom" id="fontSize">
+                        <option value="fs-6">Small</option>
+                        <option value="fs-5" selected>Medium</option>
+                        <option value="fs-4">Large</option>
+                    </select>
                 </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h6 class="text-success"><i class="bi bi-check-circle me-2"></i>Facility Features</h6>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-house me-2 text-success"></i>40 refurbished kennels</li>
-                                <li><i class="bi bi-bed me-2 text-success"></i>Individual bedding areas</li>
-                                <li><i class="bi bi-tree me-2 text-success"></i>Outdoor runs with countryside views</li>
-                                <li><i class="bi bi-thermometer-sun me-2 text-success"></i>Free winter heating</li>
-                                <li><i class="bi bi-heart me-2 text-success"></i>Special toy dog courtyard</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <h6 class="text-success"><i class="bi bi-clock me-2"></i>Daily Schedule</h6>
-                            <div class="mb-3">
-                                <strong>Summer Exercise:</strong>
-                                <ul class="list-unstyled ms-3">
-                                    <li>• Morning: 7:00 AM</li>
-                                    <li>• Evening: 4:00-5:00 PM</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <strong>Winter Exercise:</strong>
-                                <ul class="list-unstyled ms-3">
-                                    <li>• Morning: 7:00 AM</li>
-                                    <li>• Midday: 11:00 AM</li>
-                                    <li>• Evening: 4:00-5:00 PM</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="text-center">
-                        <h6 class="text-success">Inspection Visits Welcome</h6>
-                        <p class="mb-0">Monday - Saturday: 9:00 AM - 11:00 AM</p>
-                        <small class="text-muted">Please call ahead to arrange your visit</small>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#contactModal">
-                        <i class="bi bi-telephone me-2"></i>Contact Us
+                <div>
+                    <label class="form-label fw-semibold">Theme:</label>
+                    <button class="control-btn w-100 py-2" id="themeToggle" title="Toggle Dark Mode">
+                        <i class="bi bi-sun-fill me-2" id="themeIcon"></i>
+                        <span id="themeText">Light Mode</span>
                     </button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="exerciseScheduleModal" tabindex="-1" aria-labelledby="exerciseScheduleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-success" id="exerciseScheduleModalLabel">
-                        <i class="bi bi-calendar-check me-2"></i>Exercise Schedule
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card border-success h-100">
-                                <div class="card-header bg-success text-white">
-                                    <h6 class="mb-0"><i class="bi bi-sun me-2"></i>Summer Schedule</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="bi bi-sunrise text-warning me-2"></i>
-                                        <span><strong>7:00 AM</strong> - Morning Exercise</span>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-sunset text-orange me-2"></i>
-                                        <span><strong>4:00-5:00 PM</strong> - Evening Exercise</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card border-primary h-100">
-                                <div class="card-header bg-primary text-white">
-                                    <h6 class="mb-0"><i class="bi bi-snow me-2"></i>Winter Schedule</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="bi bi-sunrise text-warning me-2"></i>
-                                        <span><strong>7:00 AM</strong> - Morning Exercise</span>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="bi bi-sun text-info me-2"></i>
-                                        <span><strong>11:00 AM</strong> - Midday Exercise</span>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-sunset text-orange me-2"></i>
-                                        <span><strong>4:00-5:00 PM</strong> - Evening Exercise</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4 text-center">
-                        <div class="alert alert-info">
-                            <i class="bi bi-info-circle me-2"></i>
-                            <strong>7 Exercise Areas Available</strong><br>
-                            Each dog gets plenty of space to run and play safely
-                        </div>
-                    </div>
-                </div>
-            </div>
+</div>
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-success" id="imageModalLabel">
+            <i class="bi bi-image me-2"></i>View Kennel Image
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body text-center">
+          <img src="" alt="Modal Image" id="modalImage" class="img-fluid rounded shadow mb-3" style="max-height: 500px; object-fit: cover;">
+          <p id="imageDescription" class="text-muted"></p>
+        </div>
+      </div>
     </div>
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-success" id="contactModalLabel">
-                        <i class="bi bi-telephone me-2"></i>Contact Information
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+
+<!-- Kennel Info Modal -->
+<div class="modal fade" id="kennelInfoModal" tabindex="-1" aria-labelledby="kennelInfoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-success" id="kennelInfoModalLabel">
+          <i class="bi bi-house-door me-2"></i>Kennel Information
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <h6 class="text-success"><i class="bi bi-check-circle me-2"></i>Facility Features</h6>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-house me-2 text-success"></i>40 refurbished kennels</li>
+              <li><i class="bi bi-bed me-2 text-success"></i>Individual bedding areas</li>
+              <li><i class="bi bi-tree me-2 text-success"></i>Outdoor runs with countryside views</li>
+              <li><i class="bi bi-thermometer-sun me-2 text-success"></i>Free winter heating</li>
+              <li><i class="bi bi-heart me-2 text-success"></i>Special toy dog courtyard</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h6 class="text-success"><i class="bi bi-clock me-2"></i>Daily Schedule</h6>
+            <div class="mb-3">
+              <strong>Summer Exercise:</strong>
+              <ul class="list-unstyled ms-3">
+                <li>&bull; Morning: 7:00 AM</li>
+                <li>&bull; Evening: 4:00-5:00 PM</li>
+              </ul>
+            </div>
+            <div>
+              <strong>Winter Exercise:</strong>
+              <ul class="list-unstyled ms-3">
+                <li>&bull; Morning: 7:00 AM</li>
+                <li>&bull; Midday: 11:00 AM</li>
+                <li>&bull; Evening: 4:00-5:00 PM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="text-center">
+          <h6 class="text-success">Inspection Visits Welcome</h6>
+          <p class="mb-0">Monday - Saturday: 9:00 AM - 11:00 AM</p>
+          <small class="text-muted">Please call ahead to arrange your visit</small>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#contactModal">
+          <i class="bi bi-telephone me-2"></i>Contact Us
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Exercise Schedule Modal -->
+<div class="modal fade" id="exerciseScheduleModal" tabindex="-1" aria-labelledby="exerciseScheduleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-success" id="exerciseScheduleModalLabel">
+          <i class="bi bi-calendar-check me-2"></i>Exercise Schedule
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card border-success h-100">
+              <div class="card-header bg-success text-white">
+                <h6 class="mb-0"><i class="bi bi-sun me-2"></i>Summer Schedule</h6>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-sunrise text-warning me-2"></i>
+                  <span><strong>7:00 AM</strong> - Morning Exercise</span>
                 </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h6 class="text-success mb-3">Get in Touch</h6>
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="bi bi-telephone-fill text-success me-3"></i>
-                                <div>
-                                    <strong>Phone:</strong><br>
-                                    <a href="tel:+441543671082" class="text-decoration-none">(+44) 1543 671082</a>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="bi bi-envelope-fill text-success me-3"></i>
-                                <div>
-                                    <strong>Email:</strong><br>
-                                    <a href="mailto:info@fitstop.com" class="text-decoration-none">info@fitstop.com</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <h6 class="text-success mb-3">Visit Us</h6>
-                            <div class="d-flex align-items-start mb-3">
-                                <i class="bi bi-geo-alt-fill text-success me-3 mt-1"></i>
-                                <div>
-                                    <strong>Address:</strong><br>
-                                    356 Lichfield Road<br>
-                                    Burntwood WS7 0HU
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start">
-                                <i class="bi bi-clock-fill text-success me-3 mt-1"></i>
-                                <div>
-                                    <strong>Inspection Hours:</strong><br>
-                                    Mon-Sat: 9:00 AM - 11:00 AM<br>
-                                    <small class="text-muted">Please call ahead</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-sunset text-orange me-2"></i>
+                  <span><strong>4:00-5:00 PM</strong> - Evening Exercise</span>
                 </div>
-                <div class="modal-footer">
-                    <a href="https://www.google.com/maps?q=356+Lichfield+Road,+Burntwood+WS7+0HU" target="_blank" class="btn btn-outline-success">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card border-primary h-100">
+              <div class="card-header bg-primary text-white">
+                <h6 class="mb-0"><i class="bi bi-snow me-2"></i>Winter Schedule</h6>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-sunrise text-warning me-2"></i>
+                  <span><strong>7:00 AM</strong> - Morning Exercise</span>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-sun text-info me-2"></i>
+                  <span><strong>11:00 AM</strong> - Midday Exercise</span>
+                </div>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-sunset text-orange me-2"></i>
+                  <span><strong>4:00-5:00 PM</strong> - Evening Exercise</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <div class="alert alert-info">
+            <i class="bi bi-info-circle me-2"></i>
+            <strong>7 Exercise Areas Available</strong><br>
+            Each dog gets plenty of space to run and play safely
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-success" id="contactModalLabel">
+          <i class="bi bi-telephone me-2"></i>Contact Information
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <h6 class="text-success mb-3">Get in Touch</h6>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-telephone-fill text-success me-3"></i>
+              <div>
+                <strong>Phone:</strong><br>
+                <a href="tel:+441543671082" class="text-decoration-none">(+44) 1543 671082</a>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-envelope-fill text-success me-3"></i>
+              <div>
+                <strong>Email:</strong><br>
+                <a href="mailto:w.naylor@sky.com" class="text-decoration-none">w.naylor@sky.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h6 class="text-success mb-3">Visit Us</h6>
+            <div class="d-flex align-items-start mb-3">
+              <i class="bi bi-geo-alt-fill text-success me-3 mt-1"></i>
+              <div>
+                <strong>Address:</strong><br>
+                356 Lichfield Road<br>
+                Burntwood WS7 0HU
+              </div>
+            </div>
+            <div class="d-flex align-items-start">
+              <i class="bi bi-clock-fill text-success me-3 mt-1"></i>
+              <div>
+                <strong>Inspection Hours:</strong><br>
+                Mon-Sat: 9:00 AM - 11:00 AM<br>
+                <small class="text-muted">Please call ahead</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://www.google.com/maps?q=356+Lichfield+Road,+Burntwood+WS7+0HU" target="_blank" class="btn btn-outline-success">
+          <i class="bi bi-geo-alt me-2"></i>View on Map
+        </a>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+          <i class="bi bi-check-lg me-2"></i>Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
