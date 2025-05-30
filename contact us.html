@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Contact Us - Edial Boarding Kennels & Cattery</title>
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -122,6 +119,19 @@
     border-radius: 12px;
     margin-bottom: 15px;
   }
+  .btn-outline-success-custom {
+  color: #198754; 
+  border: 1px solid #198754;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-success-custom:hover {
+  background-color: #198754;
+  color: #fff;
+  border-color: #198754;
+}
+
 
   footer {
     background: var(--bg-secondary);
@@ -184,7 +194,7 @@
   </div>
 </nav>
     </header>
-<div class="container my-5">
+<div class="container my-5"  style="color: var(--text-primary);">
   <h2 class="display-2 fw-bold text-center mb-4 text-success">Contact Us</h2>
   <div class="row justify-content-center g-4">
     <div class="col-md-6">
@@ -198,11 +208,11 @@
   </div>
  <div class="row justify-content-center g-4 mt-4">
   <div class="col-md-6">
-    <div class="bg-light p-4 border border-success h-100">
+    <div class="bg-light p-4 border border-success h-100"  style="color: var(--text-primary);">
       <h2 class="mb-1 fw-bold text-success text-center">Edial Kennels Lichfield Road Burntwood Staffs</h2>
       <p class="text-dark"><strong>Address:</strong> 356 Lichfield Road, Burntwood WS7 0HU</p>
       <p class="text-dark"><strong>Contact Person:</strong> w.naylor@sky.com</p>
-      <p class="text-dark"><strong>Tel Number:</strong> 01543671082</p>
+      <p class="text-dark"><strong>Tel Number:</strong> 01543 671082  /  07752214378</p>
       <p class="text-dark"><strong>Facebook:</strong>
         <a href="https://www.facebook.com/profile.php?id=100057602252757" target="_blank" class="text-primary text-decoration-none">
           <i class="bi bi-facebook"></i> facebook.com
@@ -216,7 +226,7 @@
     <form class="bg-light p-4 border border-success h-100">
       <h5 class="mb-3 fw-bold text-success text-center">Send Us a Message</h5>
       <div class="mb-3">
-        <label for="name" class="form-label">Name:</label>
+        <label for="name" class="form-label"  style="color: var(--text-primary);">Name:</label>
         <input type="text" class="form-control" id="name" required>
       </div>
       <div class="mb-3">
@@ -231,7 +241,7 @@
         <label for="message" class="form-label">Your Message:</label>
         <textarea class="form-control" id="message" rows="4" required></textarea>
       </div>
-      <button type="submit" class="btn btn-success-subtle border border-success w-100">Send Message</button>
+<button type="submit" class="btn btn-outline-success-custom w-100">Send Message</button>
     </form>
   </div>
 </div>
@@ -240,38 +250,40 @@
 </div>
 <section id="contact" class="bg-success-subtle text-dark py-5" style="background: var(--bg-secondary); color: var(--text-primary);">
   <div class="container">
-    <div class="row text-center text-md-start align-items-center">
-      
-      <!-- Logo and Name -->
+    <div class="row text-md-start align-items-start justify-content-between text-center text-md-left">
+
       <div class="col-md-3 mb-4">
         <img src="img/logo2.png" alt="Logo" width="100" class="mb-3">
-        <h6 class="fw-bold">Edial Boarding Kennels & Cattery</h6>
+        <h6 class="fw-bold mb-0">Edial Boarding Kennels & Cattery</h6>
       </div>
 
-      <!-- Social Media -->
       <div class="col-md-3 mb-4">
         <h6 class="fw-bold">Follow Us</h6>
         <a href="https://www.facebook.com/profile.php?id=100057602252757" 
            target="_blank"
-           class="d-inline-flex align-items-center text-decoration-none text-dark link-hover-success">
+           class="d-inline-flex align-items-center link-hover-success">
           <i class="bi bi-facebook me-2"></i> Facebook
         </a>
       </div>
 
-      <!-- Contact Info -->
       <div class="col-md-3 mb-4">
         <h6 class="fw-bold">Contact Us</h6>
-        <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> info@fitstop.com</p>
-        <p><i class="bi bi-telephone-fill me-2"></i> (+44) 1543 671082</p>
+        <p class="mb-1 d-flex align-items-center">
+          <i class="bi bi-envelope-fill me-2"></i>
+          <a href="mailto:info@fitstop.com" class="link-hover-success mb-0">info@fitstop.com</a>
+        </p>
+        <p class="mb-0 d-flex align-items-center">
+          <i class="bi bi-telephone-fill me-2"></i> (+44) 1543 671082
+        </p>
       </div>
 
       <div class="col-md-3 mb-4">
         <h6 class="fw-bold">Location</h6>
-        <p class="mb-0">
+        <p class="mb-0 d-flex align-items-center">
           <i class="bi bi-geo-alt-fill me-2"></i>
           <a href="https://www.google.com/maps?q=356+Lichfield+Road,+Burntwood+WS7+0HU"
              target="_blank"
-             class="text-decoration-none text-dark link-hover-success">
+             class="link-hover-success">
             356 Lichfield Road, Burntwood WS7 0HU
           </a>
         </p>
@@ -286,7 +298,6 @@
     </div>
   </div>
 </section>
-
 
     <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
         <div class="modal-dialog">
